@@ -12,12 +12,20 @@ Now this project involved three steps
 
 # Step 1 :- Sniffing bluetooth packets
 So i first used nRF connect app on android to scan for the bulb after i turned it on.
-I found out the various services exposed by it, and try to find out the various characteristics or features which can be modifed in that service
+I found out the various services exposed by it, and try to find out the various characteristics or features which can be modifed in that service.
+
+<p float="left">
+<img src="screenshots/NRF1.png" alt="drawing" width="200"/>
+<img src="screenshots/NRF2.png" alt="drawing" width="200"/>
+<img src="screenshots/NRF3.png" alt="drawing" width="200"/>
+<img src="screenshots/NRF4.png" alt="drawing" width="200"/>
+</p>
 For most bulbs this till now may be sufficient and you can get the pattern of the packet required to change a color but for me it was not sufficient
-So i went a step ahead and i needed to enale bluetooth hci snooping in android develper options to collect bluetooth logs on the device.
+So i went a step ahead and i needed to enable bluetooth hci snooping in android develper options to collect bluetooth logs on the device.
 Then i downloaded the reos apk and installed it on my mobile, used it to connect to it and change it to various colors and various patterns ,modes,intensity.
 Then i sent the log file from android to my pc and used wireshark to analyse those packets.
 For that rename the file with the extension .pcap and open it with wireshark.
+<img src="screenshots/wireshark.png" alt="drawing"/>
 
 # Step 2 :- Decoding
 So this is the process where we try to figure out how the rgb pattern is sent to the bulb.
